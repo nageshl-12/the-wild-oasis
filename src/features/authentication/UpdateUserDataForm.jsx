@@ -1,22 +1,15 @@
 import toast from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
 import { useQueryClient } from '@tanstack/react-query';
-import { useNavigate } from 'react-router-dom';
 import Form from '../../ui/FormFields';
 import FormInput from '../../ui/FormInput';
 import ProfileAvatar from '../../ui/ProfileAvatar';
-
 import { useUpdateUser } from './useUpdateUser';
 import { useUser } from './useUser';
-import { logout } from '../../services/apiAuth';
-import { useState } from 'react';
 import FileInput from '../../ui/FileInput';
 
 function UpdateUserDataForm() {
   const queryClient = useQueryClient();
-  const navigate = useNavigate();
-  const [hasFile, setFile] = useState(null);
-  console.log(hasFile);
 
   const { updateUser, isPending } = useUpdateUser();
 
@@ -33,34 +26,27 @@ function UpdateUserDataForm() {
     defaultValues: {
       fullName: currentFullname,
       email,
-      password: '',
     },
   });
 
-  function onSubmit({ fullName, password, image }) {
+  function onSubmit({ fullName, image }) {
     const avatar = image?.[0];
 
-    if (fullName === currentFullname && !password && !avatar) return;
+    if (fullName === currentFullname && !avatar) return;
 
     updateUser(
-      { fullName, password, avatar },
+      { fullName, avatar },
       {
-        onSuccess: async () => {
-          if (password) {
-            toast.success('Password updated. Please log in again.');
-            queryClient.clear();
-            logout();
-            navigate('/login', { replace: true });
-          } else {
-            toast.success('User Account successfully updated');
-            queryClient.invalidateQueries();
-          }
+        onSuccess: () => {
+          toast.success('User account successfully updated');
+          queryClient.invalidateQueries();
         },
       },
     );
   }
+
   return (
-    <div className="mx-auto w-full max-w-2xl px-4 py-8 sm:px-6 animate-fade-in-up">
+    <div className="mx-auto w-full max-w-2xl animate-fade-in-up px-4 py-8 sm:px-6">
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-gray-900">
           Update your account
@@ -82,42 +68,25 @@ function UpdateUserDataForm() {
           <FormInput id="email" type="email" disabled {...register('email')} />
         </Form>
 
-        <Form
-          label="Password (Min 8 characters)"
-          error={errors?.password?.message}
-        >
+        <Form label="Full name" error={errors?.fullName?.message}>
           <FormInput
-            id="password"
-            placeholder="Enter new password (optional)"
-            type="password"
-            {...register('password', {
-              validate: (value) =>
-                !value ||
-                value.length >= 8 ||
-                'Password must be at least 8 characters',
+            id="fullName"
+            type="text"
+            {...register('fullName', {
+              required: 'Full name is required',
             })}
           />
-        </Form>
-
-        <Form label="Full name">
-          <FormInput id="fullName" type="text" {...register('fullName')} />
         </Form>
 
         <Form label="Update profile avatar">
           <FileInput id="image" accept="image/*" {...register('image')} />
         </Form>
-        {hasFile && (
-          <p className="text-sm text-gray-500">
-            Selected image: {hasFile.name}
-          </p>
-        )}
+
         <div className="flex justify-end gap-3 border-t border-gray-100 pt-5">
           <button
             disabled={isPending}
             type="button"
-            onClick={() => {
-              (reset(), setFile(null));
-            }}
+            onClick={() => reset()}
             className="cursor-pointer rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
           >
             Cancel

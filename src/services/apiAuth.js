@@ -51,31 +51,19 @@ export async function logout() {
   if (error) throw new Error(error.message);
 }
 
-
-
-export async function updateCurrentUser({ fullName, password, avatar }) {
-  
-  const updateData = {};
-
-  if (password) updateData.password = password;
-
-  if (fullName) {
-    updateData.data = { fullName };
-  }
-
+export async function updateCurrentUser({ fullName, avatar }) {
   let data;
 
-  // Update authentication data only when needed
-  if (Object.keys(updateData).length > 0) {
-    const { data: userData, error } =
-      await supabase.auth.updateUser(updateData);
+  if (fullName) {
+    const { data: userData, error } = await supabase.auth.updateUser({
+      data: { fullName },
+    });
 
     if (error) throw new Error(error.message);
 
     data = userData;
   }
 
-  // Update avatar if provided
   if (avatar) {
     const fileName = `${Date.now()}-${avatar.name}`;
 
@@ -85,18 +73,22 @@ export async function updateCurrentUser({ fullName, password, avatar }) {
 
     if (storageError) throw new Error(storageError.message);
 
-    const imageUrl = `https://hovamjuoqexoukogzrtt.supabase.co/storage/v1/object/public/avatars/${fileName}`;
+    const { data: publicUrlData } = supabase.storage
+      .from('avatars')
+      .getPublicUrl(fileName);
 
-    const { data: updatedUser, error } = await supabase.auth.updateUser({
+    const imageUrl = publicUrlData.publicUrl;
+
+    const { data: userData, error } = await supabase.auth.updateUser({
       data: {
-        fullName,
+        ...(fullName && { fullName }),
         avatar: imageUrl,
       },
     });
 
     if (error) throw new Error(error.message);
 
-    data = updatedUser;
+    data = userData;
   }
 
   return data;

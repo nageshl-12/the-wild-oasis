@@ -1,8 +1,6 @@
 import { PAGE_SIZE } from '../utils/constants';
 import supabase from './supabase';
 
-//Get
-
 export async function getCabins({ filter, sortBy, page }) {
   let query = supabase.from('cabins').select('*', { count: 'exact' });
 
@@ -37,8 +35,6 @@ export async function getCabins({ filter, sortBy, page }) {
   return { data, count };
 }
 
-//Create
-
 export async function createCabin(newCabin) {
   let imagePath = newCabin.image;
 
@@ -68,7 +64,6 @@ export async function createCabin(newCabin) {
   if (error) throw new Error('Cabin could not be created');
 }
 
-//Delete
 export async function deleteCabin(cabinId) {
   const { data, error } = await supabase
     .from('cabins')
@@ -83,7 +78,6 @@ export async function deleteCabin(cabinId) {
   return data;
 }
 
-//Update
 export async function updateCabin(cabinId, updatedCabinData) {
   const { image, ...cabinData } = updatedCabinData;
 
