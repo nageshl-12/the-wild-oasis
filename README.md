@@ -1,84 +1,156 @@
 # 🏨 The Wild Oasis
 
-### Hotel Management Made Simple.
+<h3 align="center">A Smarter Way to Manage Your Hotel.</h3>
 
-A modern hotel management dashboard built to simplify cabin management, bookings, guest information, and daily hotel operations.
+<p align="center">
+  A modern hotel management dashboard designed to simplify cabin management, bookings, guest information, and daily hotel operations.
+</p>
+
+<p align="center">
+  <a href="https://the-wild-oasis-hms.vercel.app/">
+    <img src="https://img.shields.io/badge/🚀_LIVE_DEMO-Visit_Application-2E8B57?style=for-the-badge" />
+  </a>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-2026-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/Vite-Frontend-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
   <img src="https://img.shields.io/badge/Supabase-Backend-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-Styling-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-</p>
-
-<p align="center">
-  <a href="YOUR_VERCEL_URL">🌐 Live Demo</a> •
-  <a href="#features">Features</a> •
-  <a href="#installation">Installation</a>
+  <img src="https://img.shields.io/badge/Vite-Build_Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
 </p>
 
 ---
 
-## 📸 Application Preview
+## 🌿 About The Project
 
-<!-- Add your actual application screenshots here -->
+**The Wild Oasis** is a hotel management system built to help hotel staff efficiently manage their daily operations through a clean, intuitive, and modern dashboard.
 
-| Dashboard | Cabin Management |
-|:---:|:---:|
-| ![Dashboard](screenshots/dashboard.png) | ![Cabins](screenshots/cabins.png) |
-
-| Booking Management | Settings |
-|:---:|:---:|
-| ![Bookings](screenshots/bookings.png) | ![Settings](screenshots/settings.png) |
-
----
+From managing cabins and reservations to tracking guests and monitoring hotel performance, everything is accessible from one centralized application.
 
 ## ✨ Features
 
-| Feature | Description |
-|---|---|
-| 📊 Dashboard | Visual overview of hotel performance and statistics |
-| 🏡 Cabin Management | Create, edit, delete and manage cabins |
-| 📅 Booking Management | Manage reservations and booking details |
-| 👥 Guest Management | Access guest information |
-| 🔍 Filtering | Filter records based on different criteria |
-| ↕️ Sorting | Server-side sorting |
-| 📄 Pagination | Efficient server-side pagination |
-| 🔐 Authentication | Secure staff authentication |
-| ⚙️ Settings | Configure hotel operational settings |
-| 📱 Responsive UI | Responsive layouts for different screen sizes |
+<table>
+<tr>
+<td width="50%">
 
----
+### 📊 Dashboard
+- Hotel performance overview
+- Booking statistics
+- Revenue insights
+- Interactive charts
+
+</td>
+<td width="50%">
+
+### 🏡 Cabin Management
+- Create new cabins
+- Edit cabin details
+- Delete cabins
+- Manage cabin images
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📅 Booking Management
+- View all reservations
+- Filter bookings
+- Sort booking records
+- Server-side pagination
+
+</td>
+<td width="50%">
+
+### 👥 Guest Management
+- Guest information
+- Booking details
+- Guest records
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### ⚙️ Hotel Settings
+- Manage hotel settings
+- Configure operational values
+
+</td>
+<td width="50%">
+
+### 🔐 Authentication
+- Secure staff login
+- Protected application routes
+- Supabase authentication
+
+</td>
+</tr>
+</table>
+
+## 🖥️ Application Preview
+
+<p align="center">
+  <b>Dashboard</b>
+</p>
+
+<!-- Add your dashboard screenshot here -->
+<p align="center">
+  <img src="screenshots/dashboard.png" width="100%" alt="Wild Oasis Dashboard" />
+</p>
+
+<p align="center">
+  <b>Cabin Management</b>
+</p>
+
+<!-- Add your cabin management screenshot here -->
+<p align="center">
+  <img src="screenshots/cabins.png" width="100%" alt="Cabin Management" />
+</p>
+
+<p align="center">
+  <b>Booking Management</b>
+</p>
+
+<!-- Add your booking screenshot here -->
+<p align="center">
+  <img src="screenshots/bookings.png" width="100%" alt="Booking Management" />
+</p>
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- React
-- React Router
-- Tailwind CSS
-- React Hook Form
-- Recharts
-- Lucide React
+| Technology | Usage |
+|---|---|
+| React | Frontend development |
+| React Router | Routing and navigation |
+| Tailwind CSS | Styling and responsive UI |
+| Supabase | Backend and database |
+| PostgreSQL | Database |
+| TanStack React Query | Server state management |
+| React Hook Form | Form handling |
+| Recharts | Data visualization |
+| date-fns | Date manipulation |
+| React Hot Toast | Notifications |
+| Lucide React | Icons |
+| Vite | Development and build tool |
 
-### Backend & State Management
-- Supabase
-- PostgreSQL
-- TanStack React Query
-- Supabase Authentication
-- Supabase Storage
+## ⚡ Key Technical Implementations
 
-### Utilities & Tools
-- Vite
-- date-fns
-- React Hot Toast
-- Git & GitHub
-- Vercel
+- Server-side filtering, sorting, and pagination.
+- Data fetching and caching with TanStack React Query.
+- Reusable custom React hooks.
+- Form validation and management using React Hook Form.
+- Protected routes and authentication.
+- Supabase Row Level Security (RLS).
+- Reusable components and modular architecture.
+- Error handling with React Error Boundary.
 
----
+## 🚀 Getting Started
 
-## 🚀 Installation
+Follow these instructions to run the project locally.
 
 ### Prerequisites
+
 - Node.js
 - npm
 - Supabase account
@@ -86,7 +158,7 @@ A modern hotel management dashboard built to simplify cabin management, bookings
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/the-wild-oasis.git
+git clone https://github.com/nageshl-12/the-wild-oasis
 ```
 
 ### 2. Navigate to the project
@@ -110,47 +182,43 @@ VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_publishable_key
 ```
 
-### 5. Start development server
+### 5. Start the development server
 
 ```bash
 npm run dev
 ```
 
-Open the local URL displayed in your terminal.
-
----
+The application will be available at the local URL provided by Vite.
 
 ## 🔒 Security
 
-- Supabase Row Level Security (RLS).
-- Authenticated access to protected resources.
+- Supabase authentication for user access.
+- Row Level Security (RLS) policies.
 - Public publishable key for frontend initialization.
-- No service role keys exposed in the frontend.
+- Service role key is never exposed in the frontend.
 
----
+## 🌐 Live Application
 
-## 🌐 Deployment
+<p align="center">
+  <a href="https://the-wild-oasis-hms.vercel.app/">
+    <img src="https://img.shields.io/badge/EXPLORE_THE_WILD_OASIS-Visit_Live_Application-2E8B57?style=for-the-badge" />
+  </a>
+</p>
 
-Deployed using **Vercel**.
-
-Add the required environment variables in your Vercel project settings before deployment.
-
-**Live Application:** [Visit The Wild Oasis](YOUR_VERCEL_URL)
-
----
+**Live URL:** https://the-wild-oasis-hms.vercel.app/
 
 ## 👨‍💻 Author
 
 **YOUR NAME**
 
-GitHub: [YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+GitHub: [YOUR_USERNAME](https://github.com/nageshl-12/the-wild-oasis)
 
 ---
 
 <p align="center">
-  Made with ❤️ using React and Supabase.
+  Built with ❤️ using React and Supabase.
 </p>
 
 <p align="center">
-  ⭐ If you like this project, consider giving it a star!
+  ⭐ If you find this project interesting, consider giving it a star!
 </p>
