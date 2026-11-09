@@ -209,7 +209,7 @@ The application will be available at the local URL provided by Vite.
 
 ## 👨‍💻 Author
 
-**YOUR NAME**
+Nagesh L
 
 GitHub: [YOUR_USERNAME](https://github.com/nageshl-12/the-wild-oasis)
 
