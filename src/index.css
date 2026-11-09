@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@import 'tailwind-animations';
+
+@theme {
+  --font-google: Google Sans, 'sans';
+  --font-roboto-mono: Roboto Mono, 'sans';
+  --font-roboto: Roboto, 'sans';
+
+  --color-primary: #1677f2;
+  --color-primary-hover: #1265d6;
+  --color-active: #2563eb;
+
+  /* Text colors */
+  --color-navy: #111827;
+  --color-muted: #6b7280;
+
+  /* Background colors */
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-filter: #f3f4f6;
+
+  /* Borders */
+  --color-border: #e5e7eb;
+
+  /* Success / discount */
+  --color-success: #15803d;
+  --color-success-bg: #dcfce7;
+}
