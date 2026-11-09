@@ -211,7 +211,7 @@ The application will be available at the local URL provided by Vite.
 
 Nagesh L
 
-GitHub: https://github.com/nageshl-12/the-wild-oasis
+GitHub: https://github.com/nageshl-12
 
 ---
 
