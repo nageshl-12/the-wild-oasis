@@ -88,51 +88,27 @@ From managing cabins and reservations to tracking guests and monitoring hotel pe
 </tr>
 </table>
 
-## 🖥️ Application Preview
-
-<p align="center">
-  <b>Dashboard</b>
-</p>
-
-<!-- Add your dashboard screenshot here -->
-<p align="center">
-  <img src="screenshots/dashboard.png" width="100%" alt="Wild Oasis Dashboard" />
-</p>
-
-<p align="center">
-  <b>Cabin Management</b>
-</p>
-
-<!-- Add your cabin management screenshot here -->
-<p align="center">
-  <img src="screenshots/cabins.png" width="100%" alt="Cabin Management" />
-</p>
-
-<p align="center">
-  <b>Booking Management</b>
-</p>
-
-<!-- Add your booking screenshot here -->
-<p align="center">
-  <img src="screenshots/bookings.png" width="100%" alt="Booking Management" />
-</p>
-
 ## 🛠️ Tech Stack
 
-| Technology | Usage |
-|---|---|
-| React | Frontend development |
-| React Router | Routing and navigation |
-| Tailwind CSS | Styling and responsive UI |
-| Supabase | Backend and database |
-| PostgreSQL | Database |
-| TanStack React Query | Server state management |
-| React Hook Form | Form handling |
-| Recharts | Data visualization |
-| date-fns | Date manipulation |
-| React Hot Toast | Notifications |
-| Lucide React | Icons |
-| Vite | Development and build tool |
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+### Backend & Database
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+
+### State Management & Forms
+![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)
+![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white)
+
+### Libraries & Utilities
+![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=for-the-badge)
+![date-fns](https://img.shields.io/badge/date--fns-770C56?style=for-the-badge)
+![React Hot Toast](https://img.shields.io/badge/React_Hot_Toast-FF6B6B?style=for-the-badge)
+![Lucide React](https://img.shields.io/badge/Lucide_React-F56565?style=for-the-badge&logo=lucide&logoColor=white)
 
 ## ⚡ Key Technical Implementations
 
